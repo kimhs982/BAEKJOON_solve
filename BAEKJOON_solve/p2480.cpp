@@ -1,3 +1,4 @@
+// 백준 2480번, 주사위 세개
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
 
@@ -19,7 +20,7 @@ int main() {
 			max = num2;
 		if (max < num3)
 			max = num3;
-		printf("%d\n", max);
+		printf("%d\n", max * 100);
 	}
 
 	return 0;
