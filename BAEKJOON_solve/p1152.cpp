@@ -1,3 +1,5 @@
+// 1152번, 단어의 개수
+// 문제의 요점을 정확하게 파악하지 못함... 딴 길로 새서 시간이 너무 오래 걸렸음...
 #include <iostream>
 //#include <cctype>
 #include <string>
