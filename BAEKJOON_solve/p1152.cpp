@@ -1,21 +1,23 @@
 #include <iostream>
+//#include <cctype>
 #include <string>
 using namespace std;
 
 int main() {
 	string str;
-	int count = 0, c_word = 0;
-	bool first = true;
+	int count = 0;
+	//int	c_word = 0, c_temp = 0;
 	getline(cin, str);
 
-	for (int i = 0; i < str.length(); i++) {
+	/*for (int i = 0; i < str.length(); i++) {
 		if (str[i] == ' ') {
 			c_word = i + 1;
 			if (i != 0 && i != str.length() - 1)
 				count++;
+			count += c_temp;
 		}
 		else {
-			if ((str[i] == str[c_word]) && (i != c_word)) {
+			if ((tolower(str[i]) == tolower(str[c_word])) && (i != c_word)) {
 				bool check = true;
 				int j;
 				if (i - c_word > 1) {
@@ -26,19 +28,31 @@ int main() {
 						}
 					}
 					if (check == true) {
-						if (first == true) {
-							count++;
-							first = false;
-						}
 						count++;
 						c_word = i;
-						i += j;
+						i += (j - 1);
 					}
 				}
+				else if (i - c_word == 1) {
+					c_temp++;
+					c_word = i;
+				}
 			}
+			else
+				c_temp = 0;
 		}
-	}
-	cout << count + 1 << endl;
+	}*/
+
+	for (int i = 0; i < str.length(); i++)
+		if (str[i] == ' ')
+			count++;
+
+	if ((str[0] == ' ') && str[str.length() - 1] == ' ')
+		count--;
+	else if ((str[0] != ' ') && (str[str.length() - 1] != ' '))
+		count++;
+
+	cout << count << endl;
 
 	return 0;
 }
