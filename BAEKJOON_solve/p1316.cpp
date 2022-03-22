@@ -22,10 +22,8 @@ int main() {
 						g_word = false;
 						break;
 					}
-				if (g_word == true) {
-					str_ptr[index] = str[j];
-					index++;
-				}
+				if (g_word == true)
+					str_ptr[index++] = str[j];
 				else
 					break;
 			}
