@@ -3,20 +3,13 @@
 using namespace std;
 
 int main() {
-	int A, B, C, BEP = 0;
-	unsigned int cost, earn;
+	int A, B, C, BEP;
 	cin >> A >> B >> C;
 
-	if (B >= C)
+	if (C - B <= 0)
 		BEP = -1;
 	else
-		while (1) {
-			cost = A + B * BEP;
-			earn = C * BEP;
-			if (earn > cost)
-				break;
-			BEP++;
-		}
+		BEP = (A / (C - B)) + 1;
 
 	cout << BEP << endl;
 
