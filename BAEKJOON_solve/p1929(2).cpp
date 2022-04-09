@@ -1,5 +1,5 @@
 // 1929번, 소수 구하기, 시간 초과(배열)
-#include <iostream>
+#include <cstdio>
 #include <cmath>
 
 using namespace std;
@@ -8,7 +8,7 @@ void print_primeNum(int, int);
 
 int main() {
 	int start, end;
-	cin >> start >> end;
+	scanf("%d%d", &start, &end);
 
 	print_primeNum(start, end);
 
@@ -62,7 +62,7 @@ void print_primeNum(int in_start, int in_end) {
 
 	for (int i = 0; i < size; i++)
 		if (num_list[i] != 0)
-			cout << num_list[i] << endl;
+			printf("%d\n", num_list[i]);
 
 	delete[] num_list;
 }
