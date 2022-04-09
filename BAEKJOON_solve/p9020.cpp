@@ -12,14 +12,15 @@ int main() {
 	for (int i = 0; i < T; i++) {
 		scanf("%d", &n);
 
-		if (isPN(n / 2)) {
-			PN1 = PN2 = n / 2;
+		if (isPN(n / 2)) {		// n/2가 소수인 경우
+			PN1 = PN2 = n / 2;		// 두 소수가 n/2인 경우 차이가 가장 작음
 			printf("%d %d\n", PN1, PN2);
 			continue;
 		}
 
-		if ((n / 2) % 2 == 0)
-			for (int j = n / 2 + 1; j < n; j += 2) {
+		// n/2가 소수가 아닌 경우
+		if ((n / 2) % 2 == 0)		// n/2가 짝수인 경우
+			for (int j = n / 2 + 1; j < n; j += 2) {		// n/2 + 1(n/2에 가장 가까운 홀수부터 확인)부터 n보다 작을 때까지 2씩 증가시켜 홀수만 확인
 				if (isPN(j) && isPN(n - j)) {
 					PN2 = j;
 					PN1 = n - PN2;
@@ -27,8 +28,9 @@ int main() {
 					break;
 				}
 			}
+		// n/2가 홀수인 경우
 		else
-			for (int j = n / 2 + 2; j < n; j += 2) {
+			for (int j = n / 2 + 2; j < n; j += 2) {		// n/2 + 2(n/2에 가장 가까운 홀수부터 확인)부터 n보다 작을 때까지 2씩 증가시켜 홀수만 확인
 				if (isPN(j) && isPN(n - j)) {
 					PN2 = j;
 					PN1 = n - PN2;
