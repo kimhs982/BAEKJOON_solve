@@ -18,6 +18,9 @@ int main() {
 
 	printf("%d\n", count_recolor);
 
+	for (int i = 0; i < N; i++)
+		delete[] * (chessBoard + i);
+	delete[] chessBoard;
 	return 0;
 }
 
@@ -70,7 +73,7 @@ int min_chessBoardRecolor(char** in_ChessBoard, int in_N, int in_M) {
 				count = count2;
 
 			// 최소값을 찾음
-			if (i == 0)
+			if ((i == 0) && (j == 0))
 				min_count = count;
 			else if (min_count > count)
 				min_count = count;
