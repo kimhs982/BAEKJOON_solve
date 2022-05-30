@@ -7,7 +7,7 @@ int BinomialCoefficient(int, int);
 int main() {
 	int N, K;
 	scanf("%d%d", &N, &K);
-	
+
 	printf("%d\n", BinomialCoefficient(N, (K < N - K ? K : N - K)));		// nCk = nCn-k 성질을 이용
 
 	return 0;
@@ -17,9 +17,12 @@ int main() {
 int BinomialCoefficient(int in_N, int in_K) {
 	int numerator = in_N, denominator = in_K;
 	for (int i = 1; i < in_K; i++) {
-		numerator *= (in_N - i);		
+		numerator *= (in_N - i);
 		denominator *= (in_K - i);
 	}
 
-	return numerator / denominator;
+	if (denominator != 0)
+		return numerator / denominator;
+	else
+		return 1;
 }
