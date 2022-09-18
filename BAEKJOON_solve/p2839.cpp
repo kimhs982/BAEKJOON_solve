@@ -7,7 +7,7 @@ int main() {
 	cin >> N;
 
 	count_5 = N / 5;
-	for (int i = 0; i < (N / 5); i++) {
+	for (int i = 0; i <= (N / 5); i++) {
 		int temp = N - count_5 * 5;
 		if (temp % 3 == 0) {
 			count_3 = temp / 3;
@@ -16,10 +16,6 @@ int main() {
 		else
 			count_5--;
 	}
-	if ((N % 3 == 0) && (count_5 == 0))
-		count_3 = N / 3;
-	else if (count_5 == 0)
-		count_3 = -1;
 
 	cout << count_3 + count_5 << endl;
 
