@@ -1,4 +1,4 @@
-// 10819번, 차이를 최대로
+// 10819번, 차이를 최대로(greedy algorithm)
 #include <iostream>
 using std::ios_base;
 using std::cin;
