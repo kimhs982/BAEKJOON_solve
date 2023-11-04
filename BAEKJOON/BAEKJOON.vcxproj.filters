@@ -15,25 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="p2738.cpp">
+    <ClCompile Include="p1094.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="p2501.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="p14503.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="practice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="p1094.cpp">
+    <ClCompile Include="p2738.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="p11723.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="p14500.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="p14503.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practice.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
